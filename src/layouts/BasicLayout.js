@@ -20,6 +20,7 @@ const HighOrderUsage = Loadable({
     loader: () => import('../pages/highOrderUsage'),
     loading: MyLoadingComponent
 })
+import ErrorBoundary from '../pages/errorBoundary'
 import singleMenuData from '../menu/singleMenu'
 export default class BasicLayout extends Component {
 
@@ -34,12 +35,11 @@ export default class BasicLayout extends Component {
         window.addEventListener('error', (event) => {
             console.log(event)
         }, true)
-        console.log(a)
     }
     render() {
         return (
             <Layout style={{minHeight: '100vh'}}>
-                <img src="www.jhshs.com" alt=""/>
+                {/*<img src="www.jhshs.com" alt=""/>*/}
                 <SiderMenu
                     menuData={singleMenuData}
                 />
@@ -49,6 +49,7 @@ export default class BasicLayout extends Component {
                         <Route exact path="/todoApp" component={TodoApp}/>
                         <Route path="/tableDemo" component={TableDemo}/>
                         <Route path='/highOrderUsage' component={HighOrderUsage}/>
+                        <Route pate='/errorBoundary' component={ErrorBoundary}></Route>
                     </Switch>
                 </Layout>
             </Layout>

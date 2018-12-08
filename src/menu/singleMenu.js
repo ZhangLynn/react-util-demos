@@ -17,6 +17,11 @@ const singleMenuData=[
         path:'/highOrderUsage',
         icon:'user',
         authority:'admin'
+    }, {
+        name:'errorBoundary',
+        path:'/errorBoundary',
+        icon:'user',
+        authority:'admin'
     }
 ];
 
