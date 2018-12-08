@@ -35,7 +35,7 @@ module.exports = {
     entry: [
         // We ship a few polyfills by default:
         'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:3000/',
+        'webpack-dev-server/client?http://localhost:9000/',
         "webpack/hot/only-dev-server",
         require.resolve('./polyfills'),
         // Include an alternative client for WebpackDevServer. A client's job is to
@@ -272,7 +272,7 @@ module.exports = {
                         options: {
                             name: 'static/media/[name].[hash:8].[ext]',
                         },
-                    },
+                    }
                 ],
             },
             // ** STOP ** Are you adding a new loader?
