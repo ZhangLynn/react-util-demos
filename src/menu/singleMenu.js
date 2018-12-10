@@ -5,21 +5,31 @@ const singleMenuData=[
     {
         name:'index',
         path:'/',
+        exact: true,
         icon:'user',
         authority:'admin'
     }, {
         name:'table',
         path:'/tableDemo',
+        exact: false,
         icon:'user',
         authority:'admin'
     }, {
         name:'highOrderUsage',
         path:'/highOrderUsage',
+        exact: false,
         icon:'user',
         authority:'admin'
     }, {
-        name:'errorBoundary',
-        path:'/errorBoundary',
+        name:'error',
+        path:'/error',
+        exact: false,
+        icon:'user',
+        authority:'admin'
+    }, {
+        name:'hoc',
+        path:'/hoc',
+        exact: false,
         icon:'user',
         authority:'admin'
     }
