@@ -109,7 +109,7 @@
         "import",
         {
           "libraryName": "antd",
-          "style": true
+          "style": "css"
         }
       ],
       ["transform-decorators-legacy"]

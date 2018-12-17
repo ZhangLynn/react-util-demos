@@ -135,6 +135,10 @@ module.exports = {
                     // smaller than specified limit in bytes as data URLs to avoid requests.
                     // A missing `test` is equivalent to a match.
                     {
+                        test: /namelist.txt$/,
+                        loader:  path.resolve(__dirname, '../src/utils/webpack-loader/namelist.js'),
+                    },
+                    {
                         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
                         loader: require.resolve('url-loader'),
                         options: {
@@ -151,9 +155,7 @@ module.exports = {
                         options: {
                             plugins: [
                                 // 引入样式为 css
-                                ['import', {libraryName: 'antd', style: 'css'}],
-                                // 改动: 引入样式为 less
-                                //  ['import', { libraryName: 'antd', style: true }],
+                                // ['import', {libraryName: 'antd', style: 'css'}],
                             ],
                             // This is a feature of `babel-loader` for webpack (not Babel itself).
                             // It enables caching results in ./node_modules/.cache/babel-loader/
