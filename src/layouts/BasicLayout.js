@@ -26,6 +26,10 @@ const Hoc = Loadable({
     loader: () => import('../pages/hoc'),
     loading: MyLoadingComponent
 })
+const Algorithm = Loadable({
+    loader: () => import('../pages/algorithm'),
+    loading: MyLoadingComponent
+})
 export default class BasicLayout extends Component {
     render() {
         return (
@@ -41,6 +45,7 @@ export default class BasicLayout extends Component {
                         <Route path='/highOrderUsage' component={HighOrderUsage}/>
                         <Route path='/error' component={Error}></Route>
                         <Route path='/hoc' component={Hoc}></Route>
+                        <Route path='/algorithm' component={Algorithm}></Route>
                     </Switch>
                 </Layout>
             </Layout>

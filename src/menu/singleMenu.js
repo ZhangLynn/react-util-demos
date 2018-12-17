@@ -32,6 +32,12 @@ const singleMenuData=[
         exact: false,
         icon:'user',
         authority:'admin'
+    }, {
+        name:'algorithm',
+        path:'/algorithm',
+        exact: false,
+        icon:'user',
+        authority:'admin'
     }
 ];
 
