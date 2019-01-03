@@ -30,6 +30,18 @@ const Algorithm = Loadable({
     loader: () => import('../pages/algorithm'),
     loading: MyLoadingComponent
 })
+const Webpack = Loadable({
+    loader: () => import('../pages/webpack'),
+    loading: MyLoadingComponent
+})
+const Hooks = Loadable({
+    loader: () => import('../pages/hooks'),
+    loading: MyLoadingComponent
+})
+const PublishPage = Loadable({
+    loader: () => import('../pages/publish'),
+    loading: MyLoadingComponent
+})
 export default class BasicLayout extends Component {
     render() {
         return (
@@ -46,6 +58,9 @@ export default class BasicLayout extends Component {
                         <Route path='/error' component={Error}></Route>
                         <Route path='/hoc' component={Hoc}></Route>
                         <Route path='/algorithm' component={Algorithm}></Route>
+                        <Route path='/webpack' component={Webpack}></Route>
+                        <Route path='/hooks' component={Hooks}></Route>
+                        <Route path='/publish' component={PublishPage}></Route>
                     </Switch>
                 </Layout>
             </Layout>

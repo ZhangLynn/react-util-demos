@@ -38,6 +38,24 @@ const singleMenuData=[
         exact: false,
         icon:'user',
         authority:'admin'
+    }, {
+        name:'webpack',
+        path:'/webpack',
+        exact: false,
+        icon:'user',
+        authority:'admin'
+    }, {
+        name:'hooks',
+        path:'/hooks',
+        exact: false,
+        icon:'user',
+        authority:'admin'
+    }, {
+        name:'publish',
+        path:'/publish',
+        exact: false,
+        icon:'user',
+        authority:'admin'
     }
 ];
 
