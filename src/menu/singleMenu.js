@@ -9,8 +9,8 @@ const singleMenuData=[
         icon:'user',
         authority:'admin'
     }, {
-        name:'table',
-        path:'/tableDemo',
+        name:'flowchart',
+        path:'/flowchart',
         exact: false,
         icon:'user',
         authority:'admin'

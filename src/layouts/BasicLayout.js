@@ -14,8 +14,8 @@ const TodoApp = Loadable({
     loader: () => import('../pages/todoapp'),
     loading: MyLoadingComponent
 });
-const TableDemo = Loadable({
-    loader: () => import('../testComponent/tableDemo'),
+const Flowchart = Loadable({
+    loader: () => import('../components/flowchart/flowchart'),
     loading: MyLoadingComponent
 });
 const HighOrderUsage = Loadable({
@@ -57,7 +57,7 @@ export default class BasicLayout extends Component {
                     <Switch>
                         <Route exact path="/" component={TodoApp}/>
                         <Route exact path="/todoApp" component={TodoApp}/>
-                        <Route path="/tableDemo" component={TableDemo}/>
+                        <Route path="/flowchart" component={Flowchart}/>
                         <Route path='/highOrderUsage' component={HighOrderUsage}/>
                         <Route path='/error' component={Error}></Route>
                         <Route path='/hoc' component={Hoc}></Route>
