@@ -4,7 +4,7 @@
 import React from 'react';
 import { Modal, message } from 'antd';
 import { jsPlumb } from 'jsplumb';
-import img from '../image/index.jpg';
+import img from '../../image/index.jpg';
 import style from './style.less'
 const DATA_LEFT = [{
     name: '1A',
@@ -48,7 +48,7 @@ const DATASOURCE = [[{
     name: '5B',
     id: '5B'
 }]]
-class TableDemo extends React.Component {
+class Flowchart extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -280,4 +280,4 @@ class TableDemo extends React.Component {
     }
 }
 
-export default TableDemo;
+export default Flowchart;
