@@ -56,6 +56,12 @@ const singleMenuData=[
         exact: false,
         icon:'user',
         authority:'admin'
+    }, {
+        name:'event',
+        path:'/event',
+        exact: false,
+        icon:'user',
+        authority:'admin'
     }
 ];
 
