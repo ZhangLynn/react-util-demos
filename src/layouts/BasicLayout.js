@@ -41,6 +41,10 @@ const Hooks = Loadable({
 const PublishPage = Loadable({
     loader: () => import('../pages/publish'),
     loading: MyLoadingComponent
+});
+const Event = Loadable({
+    loader: () => import('../pages/event'),
+    loading: MyLoadingComponent
 })
 export default class BasicLayout extends Component {
     render() {
@@ -61,6 +65,7 @@ export default class BasicLayout extends Component {
                         <Route path='/webpack' component={Webpack}></Route>
                         <Route path='/hooks' component={Hooks}></Route>
                         <Route path='/publish' component={PublishPage}></Route>
+                        <Route path='/event' component={Event}></Route>
                     </Switch>
                 </Layout>
             </Layout>
