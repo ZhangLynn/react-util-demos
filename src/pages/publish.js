@@ -2,6 +2,7 @@
  * created by LynnZhang on 2019/1/2
  */
 import React from 'react';
+import Pubsub from '../components/pubsub/pubsub'
 class ObservableList {
     constructor() {
         this.observableList = []
@@ -28,24 +29,24 @@ class Observer {
         console.log(info)
     }
 }
-class Publish {
-    constructor() {
-        this.subscribers = {};
-    }
-    subscribe(type, fn) {
-        if (!this.subscribers[type]) {
-            this.subscribers[type] = []
-        }
-        this.subscribers[type].push(fn)
-    }
-    pulish(type, ...arg) {
-        if (this.subscribers[type].length > 0) {
-            this.subscribers[type].map(subscriber => {
-                subscriber(...arg)
-            })
-        }
-    }
-}
+// class Publish {
+//     constructor() {
+//         this.subscribers = {};
+//     }
+//     subscribe(type, fn) {
+//         if (!this.subscribers[type]) {
+//             this.subscribers[type] = []
+//         }
+//         this.subscribers[type].push(fn)
+//     }
+//     pulish(type, ...arg) {
+//         if (this.subscribers[type].length > 0) {
+//             this.subscribers[type].map(subscriber => {
+//                 subscriber(...arg)
+//             })
+//         }
+//     }
+// }
 let name = 'none';
 
 const PublishPage = () => {
@@ -66,9 +67,9 @@ const PublishPage = () => {
         subject.notify('hhh')
     }
     const testPubSub = () => {
-        const pubsub = new Publish();
+        const pubsub = new Pubsub();
         pubsub.subscribe('log', console.log)
-        pubsub.pulish('log', 'hi')
+        pubsub.publish('log', 'hi')
     }
     return (
         <React.Fragment>
