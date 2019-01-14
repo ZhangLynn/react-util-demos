@@ -17,17 +17,9 @@ export default class Pubsub {
             func: topic
         })
     }
-    unsubscribe(token) {
-        for ( let m in this.topics ) {
-            if ( this.topics[m] ) {
-                for ( let i = 0, j = this.topics[m].length; i < j; i++ ) {
-                    if ( this.topics[m][i].token === token ) {
-                        this.topics[m].splice( i, 1 );
-                        return token;
-                    }
-                }
-            }
-        }
+    unsubscribe(type, topic) {
+        this.topics[type]
+        && (this.topics[type] = this.topics[type].filter(item => item !== topic));
         return this;
     }
     publish(type, args) {
