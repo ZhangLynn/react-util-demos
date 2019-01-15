@@ -45,7 +45,11 @@ const PublishPage = Loadable({
 const Event = Loadable({
     loader: () => import('../pages/event'),
     loading: MyLoadingComponent
-})
+});
+const Performance = Loadable({
+    loader: () => import('../pages/performance'),
+    loading: MyLoadingComponent
+});
 export default class BasicLayout extends Component {
     render() {
         return (
@@ -66,6 +70,7 @@ export default class BasicLayout extends Component {
                         <Route path='/hooks' component={Hooks}></Route>
                         <Route path='/publish' component={PublishPage}></Route>
                         <Route path='/event' component={Event}></Route>
+                        <Route path='/performance' component={Performance}></Route>
                     </Switch>
                 </Layout>
             </Layout>

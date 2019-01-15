@@ -62,6 +62,12 @@ const singleMenuData=[
         exact: false,
         icon:'user',
         authority:'admin'
+    }, {
+        name:'performance',
+        path:'/performance',
+        exact: false,
+        icon:'user',
+        authority:'admin'
     }
 ];
 
