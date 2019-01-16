@@ -10,8 +10,16 @@ import style from './BasicLayout.less'
 import Error from '../pages/error'
 import singleMenuData from '../menu/singleMenu'
 import MyLoadingComponent from '../utils/MyLoadingComponent';
+// loadable的各种用法
 const TodoApp = Loadable({
     loader: () => import('../pages/todoapp'),
+    delay: 300,
+    timedOut: 5000,
+    // render(loaded, props) {
+    //     let Component = loaded.namedExport;
+    //     console.log(props)
+    //     return <Component {...props}/>;
+    // },
     loading: MyLoadingComponent
 });
 const Flowchart = Loadable({

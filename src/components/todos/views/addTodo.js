@@ -7,8 +7,7 @@ class AddTodo extends Component {
 
   constructor(props, context) {
     super(props, context);
-      console.log(PropTypes);
-      this.onSubmit = this.onSubmit.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
     this.refInput = this.refInput.bind(this);
   }
 

@@ -2,10 +2,10 @@ import React from 'react';
 import {view as Todos} from '../components/todos/index';
 import {view as Filter} from '../components/filter/index';
 
-function TodoApp() {
+function TodoApp(props) {
     return (
         <div>
-            <div>热更新已配置好</div>
+            <div></div>
             <Todos/>
             <Filter/>
         </div>
