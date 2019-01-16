@@ -11,6 +11,7 @@ const MyLoadingComponent = ({isLoading, error, pastDelay, retry, timeOut}) => {
     else if (error) {
         return <div>Error! <button onClick={ retry }>Retry</button></div>;
     }
+    // Handle the timeOut state
     else if (timeOut) {
         return <div>Timeout! <button onClick={ retry }>Retry</button></div>;
     }
