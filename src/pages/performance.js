@@ -1,12 +1,13 @@
 /**
  * created by LynnZhang on 2019/1/15
  */
-import React, { Fragment } from 'react';
+import React, { Fragment, lazy, Suspense } from 'react';
 import { Button } from 'antd';
 import { List, Map } from 'immutable';
-import ChildA from '../components/performance/childA';
+// import ChildA from '../components/performance/childA';
 import ListItem from '../components/performance/list';
-import VariableItem from '../components/performance/variableItem'
+import VariableItem from '../components/performance/variableItem';
+const ChildA = lazy(() => import('../components/performance/childA'));
 export default class Performance extends React.Component{
     constructor(props) {
         super(props);
@@ -61,7 +62,10 @@ export default class Performance extends React.Component{
 
     render() {
         return <Fragment>
-            <ChildA custom={this.state.render}/>
+            // 代码分片
+            <Suspense fallback={<div>Loading...</div>}>
+                <ChildA custom={this.state.render}/>
+            </Suspense>
             <Button type='primary' onClick={this.renderFun} style={{width: 100}}>render</Button>
             <ListItem data={this.state.list}/>
             <Button type='primary' onClick={this.addList} style={{width: 100}}>add</Button>
