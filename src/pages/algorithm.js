@@ -2,40 +2,32 @@
  * created by LynnZhang on 2018/12/13
  */
 import React from 'react'
-import HashTable from '../components/algorithm/HashTable'
-import LinkedList from '../components/algorithm/LinkedList'
+// import LinkedList from '../components/algorithm/LinkedList'
+import { Test, TestES5 } from '../components/algorithm/test';
+import intersection from '../components/algorithm/Set'
 import graph from '../components/algorithm/Graph'
 
 export default class Algorithm extends React.Component{
 
     initBST() {
-        // tree.insert(11);
-        // tree.insert(7);
-        // tree.insert(15);
-        // tree.insert(5);
-        // tree.insert(3);
-        // tree.insert(9);
-        // tree.insert(8);
-        // tree.insert(10);
-        // tree.insert(13);
-        // tree.insert(12);
-        // tree.insert(14);
-        // tree.insert(20);
-        // tree.insert(18);
-        // tree.insert(25);
-        // console.log(tree);
-        // tree.inOrderTraverse(console.log);
-        // tree.preOrderTraverse(console.log);
-        // tree.postOrderTraverse(console.log);
-        // tree.searchMaxValue(console.log)
-        // const link = new LinkedList();
-        // link.append(1);
-        // link.append(2);
-        // link.append(3);
-        // link.append(5);
-        // console.log(link.indexOf(3))
-        // console.log(link.getHead())
-        console.log(graph.toString())
+        // console.log(graph.toString())
+        // graph.bfs('A', console.log)
+        // const test = new Test();
+        // console.log(Test.arr)
+        // test.add(1)
+        // console.log(test.arr)
+        // console.log(test.get())
+        // const tset2 = new Test();
+        // tset2.add(2);
+        // console.log(tset2.get());
+        //
+        // const test1 = new TestES5();
+        // test1.add(1);
+        // const test2 = new TestES5();
+        // console.log(test2.size());
+        // test2.add(2);
+        // console.log(test1.size())
+        intersection()
     }
     render() {
         this.initBST();

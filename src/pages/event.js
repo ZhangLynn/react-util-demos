@@ -8,8 +8,7 @@ import foo from '../components/event/promise'
 // 自定义事件
 const event = new CustomEvent('broadcast', { detail: 'custom'});
 document.dispatchEvent(event);
-// promise 事件
-foo();
+
 const Event = () => {
     return <div>event</div>
 }

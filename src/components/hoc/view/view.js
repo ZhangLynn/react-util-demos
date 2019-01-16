@@ -3,6 +3,10 @@
  */
 import React from 'react'
 import RenderHijack from './renderHijack'
+import Test from './test'
 export default function() {
-    return <RenderHijack/>
+    return <div>
+        <RenderHijack/>
+        <Test/>
+    </div>
 }
