@@ -15,12 +15,6 @@ const singleMenuData=[
         icon:'user',
         authority:'admin'
     }, {
-        name:'highOrderUsage',
-        path:'/highOrderUsage',
-        exact: false,
-        icon:'user',
-        authority:'admin'
-    }, {
         name:'error',
         path:'/error',
         exact: false,
@@ -65,6 +59,12 @@ const singleMenuData=[
     }, {
         name:'performance',
         path:'/performance',
+        exact: false,
+        icon:'user',
+        authority:'admin'
+    }, {
+        name:'reduxForm',
+        path:'/reduxForm',
         exact: false,
         icon:'user',
         authority:'admin'

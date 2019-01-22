@@ -26,10 +26,6 @@ const Flowchart = Loadable({
     loader: () => import('../components/flowchart/flowchart'),
     loading: MyLoadingComponent
 });
-const HighOrderUsage = Loadable({
-    loader: () => import('../pages/highOrderUsage'),
-    loading: MyLoadingComponent
-})
 const Hoc = Loadable({
     loader: () => import('../pages/hoc'),
     loading: MyLoadingComponent
@@ -58,6 +54,10 @@ const Performance = Loadable({
     loader: () => import('../pages/performance'),
     loading: MyLoadingComponent
 });
+const ReduxForm = Loadable({
+    loader: () => import('../pages/reduxForm'),
+    loading: MyLoadingComponent
+});
 export default class BasicLayout extends Component {
     render() {
         return (
@@ -70,7 +70,6 @@ export default class BasicLayout extends Component {
                         <Route exact path="/" component={TodoApp}/>
                         <Route exact path="/todoApp" component={TodoApp}/>
                         <Route path="/flowchart" component={Flowchart}/>
-                        <Route path='/highOrderUsage' component={HighOrderUsage}/>
                         <Route path='/error' component={Error}></Route>
                         <Route path='/hoc' component={Hoc}></Route>
                         <Route path='/algorithm' component={Algorithm}></Route>
@@ -79,6 +78,7 @@ export default class BasicLayout extends Component {
                         <Route path='/publish' component={PublishPage}></Route>
                         <Route path='/event' component={Event}></Route>
                         <Route path='/performance' component={Performance}></Route>
+                        <Route path='/reduxForm' component={ReduxForm}></Route>
                     </Switch>
                 </Layout>
             </Layout>
