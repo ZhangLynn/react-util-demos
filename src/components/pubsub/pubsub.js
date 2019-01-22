@@ -5,21 +5,18 @@
 export default class Pubsub {
     constructor() {
         this.topics = {};
-        this.topicId = 0;
     }
     subscribe(type, topic) {
         if (!this.topics[type]) {
             this.topics[type] = []
         }
-        const token = (++this.topicId).toString();
         this.topics[type].push({
-            token: token,
             func: topic
         })
     }
     unsubscribe(type, topic) {
         this.topics[type]
-        && (this.topics[type] = this.topics[type].filter(item => item !== topic));
+        && (this.topics[type] = this.topics[type].filter(item => item === topic));
         return this;
     }
     publish(type, args) {
