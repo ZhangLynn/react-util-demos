@@ -8,7 +8,7 @@ import reducers from './reducers';
  */
 const store = createStore(
     reducers,
-    applyMiddleware(thunk, logger, axiosMiddleware)
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(thunk, axiosMiddleware)
 );
-//
 export default store
