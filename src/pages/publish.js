@@ -26,7 +26,7 @@ class Subject {
 }
 class Observer {
     update(info) {
-        console.log(info)
+        // console.log(info)
     }
 }
 // class Publish {
@@ -68,8 +68,12 @@ const PublishPage = () => {
     }
     const testPubSub = () => {
         const pubsub = new Pubsub();
-        pubsub.subscribe('log', console.log)
-        pubsub.publish('log', 'hi')
+        const log = console.log;
+        pubsub.subscribe('log', log)
+        pubsub.publish('log', 'hi');
+        pubsub.unsubscribe('log', log);
+        pubsub.publish('log', 'hi');
+        console.log(pubsub.topics)
     }
     return (
         <React.Fragment>
