@@ -21,8 +21,8 @@ const singleMenuData=[
         icon:'user',
         authority:'admin'
     }, {
-        name:'hoc',
-        path:'/hoc',
+        name:'higherUsage',
+        path:'/higherUsage',
         exact: false,
         icon:'user',
         authority:'admin'
@@ -65,6 +65,12 @@ const singleMenuData=[
     }, {
         name:'reduxForm',
         path:'/reduxForm',
+        exact: false,
+        icon:'user',
+        authority:'admin'
+    }, {
+        name:'prototype',
+        path:'/prototype',
         exact: false,
         icon:'user',
         authority:'admin'
