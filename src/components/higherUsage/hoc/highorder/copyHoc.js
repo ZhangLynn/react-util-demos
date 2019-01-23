@@ -5,7 +5,7 @@ import gotem from 'gotem';
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
 import {message} from 'antd';
-export default copy = (targetName) => {
+const copy = (targetName) => {
     return (WrappedComponent) => {
         return class extends Component {
             componentDidMount() {
@@ -31,6 +31,7 @@ export default copy = (targetName) => {
         };
     };
 }
+export default copy
 // 使用
 // 传入 h3 ，让复制组件去获取它的值
 @copy('h3')
