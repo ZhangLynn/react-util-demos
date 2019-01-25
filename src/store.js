@@ -1,14 +1,17 @@
 import {createStore, applyMiddleware} from 'redux';
-import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import axiosMiddleware from './utils/middleWare/axiosMiddleware'
+import axiosMiddleware from 'redux-axios-middleware';
+import Ajax from './utils/middleWare/ajax';
+import axiosMiddlewareConfig from './utils/middleWare/axios.middleware_config'
 import reducers from './reducers';
-/**
-    使用中间件的写法
- */
+const logger = store => next => action => {
+    console.log('dispatch', action);
+    next(action);
+    console.log('finish', action)
+}
 const store = createStore(
     reducers,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    applyMiddleware(thunk, axiosMiddleware)
+    applyMiddleware(thunk, axiosMiddleware(Ajax, axiosMiddlewareConfig))
 );
 export default store
