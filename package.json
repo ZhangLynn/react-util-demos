@@ -49,6 +49,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
+    "redux-axios-middleware": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "resolve": "1.6.0",
@@ -121,6 +122,12 @@
         "transform-decorators-legacy"
       ]
     ]
+  },
+  "proxy": {
+    "v2/": {
+      "target": "https://api.douban.com/",
+      "changeOrigin": true
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
