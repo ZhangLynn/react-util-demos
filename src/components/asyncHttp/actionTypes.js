@@ -1,0 +1,2 @@
+export const INIT_DATA = 'ASYNCHTTP/INIT_DATA';
+
