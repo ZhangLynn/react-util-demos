@@ -4,7 +4,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
-import MovieActions from '../actions';
+import MovieActions from '../../data/axios-promise/actions';
 import MovieList from './movieList'
 const mapStateToProps = (state) => {
     return {

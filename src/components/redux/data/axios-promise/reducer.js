@@ -23,6 +23,8 @@ const initList = (state = {}, action) => {
     }
 }
 
-export default combineReducers({
+const movieReducer = combineReducers({
     movieList: initList
 });
+
+export default movieReducer;
