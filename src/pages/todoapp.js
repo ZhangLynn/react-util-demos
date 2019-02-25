@@ -1,6 +1,6 @@
 import React from 'react';
-import {view as Todos} from '../components/todos/index';
-import {view as Filter} from '../components/filter/index';
+import Todos from '../components/todoApp/components/todos/todos';
+import Filter from '../components/todoApp/components/filter/filters';
 import {view as AsyncHttp} from '../components/asyncHttp/index'
 function TodoApp(props) {
     return (

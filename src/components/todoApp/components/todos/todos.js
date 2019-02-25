@@ -4,7 +4,7 @@ import TodoList from './todoList.js';
 
 import './style.css';
 
-export default () => {
+const Todos = () => {
   return (
     <div className="todos">
       <AddTodo />
@@ -13,3 +13,4 @@ export default () => {
   );
 }
 
+export default Todos

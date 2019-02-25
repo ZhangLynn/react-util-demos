@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from './link.js';
-import {FilterTypes} from '../constants.js'
+import { FilterTypes } from '../../data/filter/constants.js'
 
 import './style.css';
 
-const Filters = () => {
+const Filter = () => {
   return (
     <p className="filters">
       <Link filter={FilterTypes.ALL}> {FilterTypes.ALL} </Link>
@@ -14,4 +14,4 @@ const Filters = () => {
   );
 };
 
-export default Filters;
+export default Filter;
